@@ -270,6 +270,10 @@ class Adminer {
 		return $rows;
 	}
 
+    function keyByRow($row, $foreignKeys) {
+        return $foreignKeys;
+    }
+
 	/** Get a link to use in select table
 	* @param string raw value of the field
 	* @param array single field returned from fields()

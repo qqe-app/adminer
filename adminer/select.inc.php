@@ -367,6 +367,7 @@ if (!$columns && support("table")) {
 
 			foreach ($adminer->rowDescriptions($rows, $foreign_keys) as $n => $row) {
 				$unique_array = unique_array($rows[$n], $indexes);
+				$foreign_keys = $adminer->keyByRow($foreign_keys, $row);
 				if (!$unique_array) {
 					$unique_array = array();
 					foreach ($rows[$n] as $key => $val) {

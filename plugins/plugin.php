@@ -230,6 +230,11 @@ class AdminerPlugin extends Adminer {
 		return $this->_applyPlugin(__FUNCTION__, $args);
 	}
 
+    function keyByRow($row, $foreignKeys) {
+        $args = func_get_args();
+        return $this->_applyPlugin(__FUNCTION__, $args);
+    }
+
 	function selectLink($val, $field) {
 		$args = func_get_args();
 		return $this->_applyPlugin(__FUNCTION__, $args);
