@@ -1247,9 +1247,6 @@ function select_value($val, $link, $field, $text_length) {
 		$link = $adminer->selectLink($val, $field);
 	}
 	if ($link === null) {
-		if (is_mail($val)) {
-			$link = "mailto:$val";
-		}
 		if (is_url($val)) {
 			$link = $val; // IE 11 and all modern browsers hide referrer
 		}
